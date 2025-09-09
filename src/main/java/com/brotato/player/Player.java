@@ -25,11 +25,13 @@ public class Player extends GameApplication {
     private AnimationChannel idleAnim;
     private AnimationChannel attackAnim;
     private int maxHP = 100;
-    private int HP = 85;
+    private int HP = 100;
     private Image fullHeart,halfHeart,emptyHeart;
     private Pane heartsPane;
 
     private boolean canAttack = true; // 攻击冷却标记
+
+    private int movementKeyCount = 0;
 
 
     @Override
@@ -57,7 +59,7 @@ public class Player extends GameApplication {
         walkAnim = new AnimationChannel(spriteSheet, 8, 128, 128, Duration.seconds(7.0 / 12.0), 0, 6);
 
         idleAnim = new AnimationChannel(spriteSheet, 8, 128, 128,
-                Duration.seconds(1), 0, 0);
+                Duration.seconds(1), 7, 7);
 
         //攻击（近战）动画
         Image attackSheet = FXGL.image("DruidBasicAtk1-Sheet.png");
@@ -145,7 +147,10 @@ public class Player extends GameApplication {
         FXGL.getInput().addAction(new UserAction("Move Up") {
             @Override
             protected void onActionBegin() {
-                texture.loopAnimationChannel(walkAnim);
+                movementKeyCount++; // 按键数量+1
+                if (movementKeyCount == 1) { // 首次按下时启动行走动画
+                    texture.loopAnimationChannel(walkAnim);
+                }
             }
 
             @Override
@@ -157,14 +162,20 @@ public class Player extends GameApplication {
 
             @Override
             protected void onActionEnd() {
-                texture.playAnimationChannel(idleAnim);// 回到站立帧
+                movementKeyCount--;
+                if (movementKeyCount == 0) { // 所有移动按键松开时才切换到静止
+                    texture.playAnimationChannel(idleAnim);
+                }// 回到站立帧
             }
         }, KeyCode.W);
 
         FXGL.getInput().addAction(new UserAction("Move Down") {
             @Override
             protected void onActionBegin() {
-                texture.loopAnimationChannel(walkAnim);
+                movementKeyCount++;
+                if (movementKeyCount == 1) {
+                    texture.loopAnimationChannel(walkAnim);
+                }
             }
 
             @Override
@@ -176,7 +187,10 @@ public class Player extends GameApplication {
 
             @Override
             protected void onActionEnd() {
-                texture.playAnimationChannel(idleAnim);
+                movementKeyCount--;
+                if (movementKeyCount == 0) {
+                    texture.playAnimationChannel(idleAnim);
+                }
             }
         }, KeyCode.S);
 
@@ -184,7 +198,10 @@ public class Player extends GameApplication {
         FXGL.getInput().addAction(new UserAction("Move Left") {
             @Override
             protected void onActionBegin() {
-                texture.loopAnimationChannel(walkAnim);
+                movementKeyCount++;
+                if (movementKeyCount == 1) {
+                    texture.loopAnimationChannel(walkAnim);
+                }
                 texture.setScaleX(-1); // 翻转朝左
             }
 
@@ -197,8 +214,11 @@ public class Player extends GameApplication {
 
             @Override
             protected void onActionEnd() {
-                texture.playAnimationChannel(idleAnim);
-                texture.setScaleX(-1); // 保持面向左
+                movementKeyCount--;
+                if (movementKeyCount == 0) {
+                    texture.playAnimationChannel(idleAnim);
+                }
+                 // 保持面向左
             }
         }, KeyCode.A);
 
@@ -206,7 +226,10 @@ public class Player extends GameApplication {
         FXGL.getInput().addAction(new UserAction("Move Right") {
             @Override
             protected void onActionBegin() {
-                texture.loopAnimationChannel(walkAnim);
+                movementKeyCount++;
+                if (movementKeyCount == 1) {
+                    texture.loopAnimationChannel(walkAnim);
+                }
                 texture.setScaleX(1); // 正常朝右
             }
 
@@ -219,7 +242,10 @@ public class Player extends GameApplication {
 
             @Override
             protected void onActionEnd() {
-                texture.playAnimationChannel(idleAnim);
+                movementKeyCount--;
+                if (movementKeyCount == 0) {
+                    texture.playAnimationChannel(idleAnim);
+                }
                 texture.setScaleX(1);
             }
         }, KeyCode.D);
@@ -230,11 +256,17 @@ public class Player extends GameApplication {
                 if (canAttack) {
                     canAttack = false;
 
+                    // 记录攻击前的缩放方向（1为右，-1为左）
+                    double scaleX = texture.getScaleX();
+                    // 根据朝向向前移动32像素
+                    player.translateX(23 * scaleX);
+
                     texture.playAnimationChannel(attackAnim);
 
                     // 攻击动画播完后回到 idle
                     texture.setOnCycleFinished(() -> {
                         texture.playAnimationChannel(idleAnim);
+                        player.translateX(-23 * scaleX);
                         texture.setOnCycleFinished(() -> {}); // 清理回调
                     });
 
@@ -244,7 +276,6 @@ public class Player extends GameApplication {
             }
         }, KeyCode.SPACE);
     }
-
 
 
     public static void main(String[] args) {

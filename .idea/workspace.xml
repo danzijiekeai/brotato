@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a144711-4f2a-4329-b6b9-0fac5105155a" name="更改" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/DruidBasicAtk1-Sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/DruidWalk001-Sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/border.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/half_heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/textures/p1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-15.56.39.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.01.59.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.32.27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.50.25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.51.18.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.51.59.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.58.31.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.58.52.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.59.08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-17.00.22.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brotato/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brotato/player/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +85,7 @@
       <recent name="C:\Users\LeSun\Desktop\java实训\brotato\brotato\src\main\resources\assets\textures" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.Player">
+  <component name="RunManager" selected="应用程序.Player (1)">
     <configuration name="Player (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.brotato.player.Player" />
       <module name="brotato" />
@@ -96,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Player (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Player (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.brotato.player.Player" />
       <module name="brotato" />
       <extension name="coverage">
@@ -109,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Player (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Player (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.brotato.player.Player" />
       <module name="brotato" />
       <extension name="coverage">
@@ -150,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Player" />
-        <item itemvalue="应用程序.Player (3)" />
-        <item itemvalue="应用程序.Player (2)" />
         <item itemvalue="应用程序.Player (1)" />
+        <item itemvalue="应用程序.Player" />
         <item itemvalue="应用程序.Player (5)" />
+        <item itemvalue="应用程序.Player (4)" />
+        <item itemvalue="应用程序.Player (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -180,6 +183,7 @@
       <workItem from="1757401772930" duration="973000" />
       <workItem from="1757402789141" duration="1454000" />
       <workItem from="1757404405106" duration="3935000" />
+      <workItem from="1757415485554" duration="3714000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
