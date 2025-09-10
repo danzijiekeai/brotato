@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a144711-4f2a-4329-b6b9-0fac5105155a" name="更改" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brotato/player/EntityType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-15.56.39.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.01.59.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.32.27.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.50.25.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.51.18.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.51.59.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.58.31.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.58.52.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-16.59.08.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-17.00.22.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-19.33.58.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-19.38.36.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-19.49.18.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-09-9月-2025-19.49.58.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brotato/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brotato/player/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +23,7 @@
       <list>
         <option value="Class" />
         <option value="package-info" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -85,8 +81,21 @@
       <recent name="C:\Users\LeSun\Desktop\java实训\brotato\brotato\src\main\resources\assets\textures" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.Player (1)">
+  <component name="RunManager" selected="应用程序.Player (4)">
     <configuration name="Player (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brotato.player.Player" />
+      <module name="brotato" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.brotato.player.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Player (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.brotato.player.Player" />
       <module name="brotato" />
       <extension name="coverage">
@@ -125,19 +134,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Player (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.brotato.player.Player" />
-      <module name="brotato" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.brotato.player.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Player" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.brotato.player.Player" />
       <module name="brotato" />
@@ -153,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Player (1)" />
-        <item itemvalue="应用程序.Player" />
-        <item itemvalue="应用程序.Player (5)" />
         <item itemvalue="应用程序.Player (4)" />
         <item itemvalue="应用程序.Player (3)" />
+        <item itemvalue="应用程序.Player (2)" />
+        <item itemvalue="应用程序.Player" />
+        <item itemvalue="应用程序.Player (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -184,6 +180,9 @@
       <workItem from="1757402789141" duration="1454000" />
       <workItem from="1757404405106" duration="3935000" />
       <workItem from="1757415485554" duration="3714000" />
+      <workItem from="1757420488318" duration="50000" />
+      <workItem from="1757423577243" duration="2098000" />
+      <workItem from="1757464101559" duration="1500000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
